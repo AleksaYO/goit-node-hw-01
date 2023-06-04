@@ -7,6 +7,7 @@ const contactsPath = path.join(__dirname, "db/contacts.json");
 // Функцияя получения полного списка контактов
 const listContacts = async () => {
   const contacts = await fs.readFile(contactsPath);
+  console.log(JSON.parse(contacts));
   return JSON.parse(contacts);
 };
 
