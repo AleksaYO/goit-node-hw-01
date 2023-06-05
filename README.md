@@ -14,7 +14,24 @@ node index.js --action add --name Mango --email mango@gmail.com --phone 322-22-2
 
 node index.js --action remove --id qdggE76Jtbfd9eWJHrssH
 
-remove: https://monosnap.com/file/sI7MLwZsbDkpm1ODat6R4keNxDwV10
-add: https://monosnap.com/file/08Ig8ZfAayHzZ8WtZaMFieHoFywndc
-get: https://monosnap.com/file/TY5uS41hj4iYjOL1bYDwAdRvCFPRY7
-list: https://monosnap.com/file/4fhg6JDKUH0S7qWkNCO6pYQlXYDk7V
+[
+list: {
+https://monosnap.com/file/YA7CigBaaZAdo54SgIfdMqQUopmbvb,
+https://monosnap.com/file/op7GSnHoqSQmQlolW4Hvz5YmnYOWIv
+},
+
+get: {
+https://monosnap.com/file/rpoRpk9bHgxm9FvWz7TOdzZSbB0X41,
+https://monosnap.com/file/94dck8Zocs06luTxDs4dE2bCkJpla2
+},
+
+add: {
+https://monosnap.com/file/t6SsP1KT4sG56tuaYCF7qVSgIkhNHE,
+https://monosnap.com/file/XuNlcHvwR7qOoJn9OyzxQebvJhDUGt
+},
+
+remove: {
+https://monosnap.com/file/Nd6yyQFAvZZXylBmMeyrTXgc4HHdjM,
+https://monosnap.com/file/jdvAXShj0Mp63v76P5mNQqydiqr2lo
+},
+]

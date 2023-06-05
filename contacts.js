@@ -17,12 +17,12 @@ const getContactById = async (contactId) => {
 
 const removeContact = async (contactId) => {
   const contacts = await listContacts();
+  const delContact = contacts.find((contact) => contact.id === contactId);
   const index = contacts.findIndex((contact) => contact.id === contactId);
   if (index !== -1) {
-    console.log(contacts[index]);
     contacts.splice(index, 1);
     await fs.writeFile(contactsPath, JSON.stringify(contacts));
-    return contacts;
+    return delContact;
   } else {
     console.log("Номер с таким id не найден");
   }
