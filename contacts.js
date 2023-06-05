@@ -7,7 +7,6 @@ const contactsPath = path.join(__dirname, "db/contacts.json");
 // Функцияя получения полного списка контактов
 const listContacts = async () => {
   const contacts = await fs.readFile(contactsPath);
-  console.log(JSON.parse(contacts));
   return JSON.parse(contacts);
 };
 
@@ -22,7 +21,7 @@ const removeContact = async (contactId) => {
   if (index !== -1) {
     console.log(contacts[index]);
     contacts.splice(index, 1);
-    fs.writeFile(contactsPath, JSON.stringify(contacts));
+    await fs.writeFile(contactsPath, JSON.stringify(contacts));
     return contacts;
   } else {
     console.log("Номер с таким id не найден");
@@ -44,9 +43,8 @@ const addContact = async (name, email, phone) => {
     return;
   } else {
     contacts.push(newContact);
-    fs.writeFile(contactsPath, JSON.stringify(contacts));
-    console.log(newContact);
-    return contacts;
+    await fs.writeFile(contactsPath, JSON.stringify(contacts));
+    return newContact;
   }
 };
 module.exports = {
